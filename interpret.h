@@ -9,4 +9,4 @@ using namespace std;
  * @bugs none
  **/
 
-char *tokenize(string in);
+string *tokenize(string in);

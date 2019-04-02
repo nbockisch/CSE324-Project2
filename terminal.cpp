@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "interpret.h"
 using namespace std;
 /**
  * @file terminal.cpp
@@ -20,6 +21,6 @@ using namespace std;
         while (true) {
                 cout << "> ";
                 cin >> in;
-                cout << "> " << in << endl;
+                tokenize(in);
         }
  }
