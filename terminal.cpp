@@ -20,7 +20,7 @@ using namespace std;
         /* Read in input */
         while (true) {
                 cout << "> ";
-                cin >> in;
+                getline(cin, in);
                 tokenize(in);
         }
  }

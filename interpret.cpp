@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 using namespace std;
 /**
  * @file interpret.cpp
@@ -52,10 +53,11 @@ string *tokenize(string in)
                 }
         }
 
-        cout << "TOKENS" << endl;
-        for (int j = 0; j < count; j++) {
-                cout << "Here: " << tokens[j] << endl;
-        }
+        /* Add any remnant in the tmp array to the tokens list */
+        if (!tmp.empty()) {
+                tokens[count] = tmp;
+                tmp.clear();
+        }        
 
-        return NULL;
+        return tokens;
 }
