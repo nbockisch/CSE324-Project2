@@ -6,7 +6,7 @@ using namespace std;
  * @file interpret.cpp
  * @brief contains the code to tokenize and interpret user input
  * @author Nathan Bockisch
- * @date 04/01/2019
+ * @date 04/09/2019
  * @bugs none
  **/
 
@@ -15,16 +15,14 @@ using namespace std;
  * @param in a string expression
  * @return a list of tokens in the form of strings
  **/
-string *tokenize(string in)
+void tokenize(string in, string *tokens)
 {
         string symbols = "()+-*/=<>!\'";
-        string tokens[in.length()];
         string tmp;
         int count = 0;
 
         /* Cycle through every char in the input */
-        for (int i = 0; i < in.length(); i++) {
-                /* Divide the characters into tokens */
+        for (int i = 0; i < in.length(); i++) { /* Divide the characters into tokens */
                 if (in[i] == ' ') {
                         /* On space, append what's already in the token, if
                         anything */
@@ -58,6 +56,14 @@ string *tokenize(string in)
                 tokens[count] = tmp;
                 tmp.clear();
         }        
+}
 
-        return tokens;
+/**
+ * Parses a lisp expression and returns the result as a string
+ * @param tokens a string array with all the tokens of the expression
+ * @return a string with the result.
+ **/
+void parse(string *tokens)
+{
+        cout << "Memes" << endl;
 }
